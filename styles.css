@@ -9,18 +9,15 @@ html {
 }
 
 body {
+  padding: 0;
+  margin: 0;
   background: #000;
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
 }
 
 section {
-  min-height: 100vh;
   position: relative;
 }
 
@@ -56,6 +53,7 @@ section {
 /* ========================= */
 
 .hero {
+  min-height: 100vh;
   background: #f7f3ee;
   color: #111;
   display: flex;
