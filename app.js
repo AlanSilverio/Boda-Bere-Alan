@@ -75,6 +75,8 @@ setInterval(updateCountdown, 1000);
 
 const music = document.getElementById('bg-music');
 
+music.volume = 0.4;
+
 let musicStarted = false;
 
 
@@ -82,13 +84,25 @@ let musicStarted = false;
 /* START MUSIC FUNCTION */
 /* ========================= */
 
-function startMusic() {
+async function startMusic() {
 
     if (!musicStarted) {
 
-        music.play();
+        try {
 
-        musicStarted = true;
+            await music.play();
+
+            musicStarted = true;
+
+            console.log('Música iniciada');
+
+        } catch (error) {
+
+            console.log(
+                'El navegador bloqueó el autoplay',
+                error
+            );
+        }
     }
 }
 
@@ -99,10 +113,18 @@ function startMusic() {
 
 document.addEventListener(
     'click',
-    startMusic
+    startMusic,
+    { once: true }
+);
+
+document.addEventListener(
+    'scroll',
+    startMusic,
+    { once: true }
 );
 
 document.addEventListener(
     'touchstart',
-    startMusic
+    startMusic,
+    { once: true }
 );
