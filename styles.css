@@ -13,6 +13,10 @@ body {
   color: #fff;
   font-family: 'Cormorant Garamond', serif;
   overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
 }
 
 section {
@@ -23,7 +27,18 @@ section {
 .container {
   width: 100%;
   max-width: 430px;
-  margin: auto;
+}
+
+/* ========================= */
+/* MAIN APP WRAPPER */
+/* ========================= */
+
+.app-wrapper {
+  width: 100%;
+  max-width: 430px;
+  background: #000;
+  box-shadow:
+    0 0 40px rgba(0,0,0,.5);
 }
 
 /* ========================= */
@@ -332,7 +347,9 @@ section {
   font-family: 'Montserrat', sans-serif;
 }
 
+/* ========================= */
 /* GOOGLE MAPS */
+/* ========================= */
 
 .map {
   width: 100%;
