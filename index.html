@@ -1,241 +1,233 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bere & Alan</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bere & Alan</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet" />
 
-  <body>
-    <div class="app-wrapper">
-      <!-- AUDIO -->
-      <section class="music-section">
-        <audio id="bg-music" loop>
-          <source src="Musica/song.mp3" type="audio/mpeg" />
-        </audio>
-      </section>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
 
-      <!-- HERO -->
-      <section class="hero container">
-        <div class="topbar">
-          <div>B & A</div>
-          <div>MENÚ ☰</div>
+<body>
+  <div class="app-wrapper">
+    <!-- AUDIO -->
+    <section class="music-section">
+      <audio id="bg-music" loop>
+        <source src="Musica/song.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <!-- HERO -->
+    <section class="hero container">
+
+      <!-- HOJAS -->
+      <div class="leaves"></div>
+
+      <div class="topbar">
+        <div>B & A</div>
+        <div>MENÚ ☰</div>
+      </div>
+
+      <div class="hero-content">
+        <div class="welcome">
+          Bienvenidos <br />
+          a nuestra boda
         </div>
 
-        <div class="hero-content">
-          <div class="welcome">
-            Bienvenidos <br />
-            a nuestra boda
+        <div class="names">
+          BERE <br />
+          <span class="and">&</span><br />
+          ALAN
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="date">27 · Septiembre · 2027</div>
+
+        <div class="subtitle">
+          Celebremos juntos <br />
+          el inicio de nuestra historia
+        </div>
+      </div>
+
+      <img class="hero-image"
+        src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop"
+        alt="Wedding" />
+    </section>
+
+    <!-- HISTORIA -->
+    <section class="story container">
+      <div class="overlay"></div>
+
+      <div class="story-content">
+        <div class="story-title">
+          Nuestra
+          <span>Historia</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="story-text">
+          Dos caminos que se cruzaron sin buscarse y se eligieron todos los
+          días desde entonces.
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="circle">♥</div>
+            <div class="line"></div>
+            <div class="year">2018</div>
+            <div class="event">Nos conocimos</div>
           </div>
 
-          <div class="names">
-            BERE <br />
-            <span class="and">&</span><br />
-            ALAN
+          <div class="timeline-item">
+            <div class="circle">♥</div>
+            <div class="line"></div>
+            <div class="year">2020</div>
+            <div class="event">Nos enamoramos</div>
           </div>
 
-          <div class="divider"></div>
+          <div class="timeline-item">
+            <div class="circle">♥</div>
+            <div class="line"></div>
+            <div class="year">2023</div>
+            <div class="event">Dijimos que sí</div>
+          </div>
 
-          <div class="date">27 · Septiembre · 2027</div>
+          <div class="timeline-item">
+            <div class="circle">💍</div>
+            <div class="year">2027</div>
+            <div class="event">Por fin, nos casamos</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="subtitle">
-            Celebremos juntos <br />
-            el inicio de nuestra historia
+    <!-- GALERÍA -->
+    <section class="gallery-section container">
+      <h2 class="section-title">Galería</h2>
+      <div class="gallery-grid">
+
+        <!-- CARRUSEL PRINCIPAL -->
+        <div class="gallery-carousel">
+          <div class="carousel-track">
+
+            <img class="carousel-slide active"
+              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop">
+
+            <img class="carousel-slide"
+              src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop">
+
+            <img class="carousel-slide"
+              src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop">
+
           </div>
         </div>
 
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop"
-          alt="Wedding"
-        />
-      </section>
+        <img class="gallery-small"
+          src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop"
+          alt="Gallery" />
 
-      <!-- HISTORIA -->
-      <section class="story container">
-        <div class="overlay"></div>
+        <img class="gallery-small"
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
+          alt="Gallery" />
 
-        <div class="story-content">
-          <div class="story-title">
-            Nuestra
-            <span>Historia</span>
+        <img class="gallery-small"
+          src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop"
+          alt="Gallery" />
+
+        <img class="gallery-small"
+          src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop"
+          alt="Gallery" />
+      </div>
+      <!-- COUNTDOWN -->
+      <div class="countdown">
+        <h2 class="section-title gold" style="font-size: 32px; margin-bottom: 0">
+          Cuenta regresiva
+        </h2>
+        <div class="divider"></div>
+        <div class="count-grid">
+          <div>
+            <div class="number" id="days">0</div>
+            <div class="label">Días</div>
           </div>
 
-          <div class="divider"></div>
-
-          <div class="story-text">
-            Dos caminos que se cruzaron sin buscarse y se eligieron todos los
-            días desde entonces.
+          <div>
+            <div class="number" id="hours">0</div>
+            <div class="label">Horas</div>
           </div>
 
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="circle">♥</div>
-              <div class="line"></div>
-              <div class="year">2018</div>
-              <div class="event">Nos conocimos</div>
-            </div>
+          <div>
+            <div class="number" id="minutes">0</div>
+            <div class="label">Minutos</div>
+          </div>
 
-            <div class="timeline-item">
-              <div class="circle">♥</div>
-              <div class="line"></div>
-              <div class="year">2020</div>
-              <div class="event">Nos enamoramos</div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="circle">♥</div>
-              <div class="line"></div>
-              <div class="year">2023</div>
-              <div class="event">Dijimos que sí</div>
-            </div>
-
-            <div class="timeline-item">
-              <div class="circle">💍</div>
-              <div class="year">2027</div>
-              <div class="event">Por fin, nos casamos</div>
-            </div>
+          <div>
+            <div class="number" id="seconds">0</div>
+            <div class="label">Segundos</div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- GALERÍA -->
-      <section class="gallery-section container">
-        <h2 class="section-title">Galería</h2>
-        <div class="gallery-grid">
-          <img
-            class="gallery-main"
-            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop"
-            alt="Gallery"
-          />
-
-          <img
-            class="gallery-small"
-            src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop"
-            alt="Gallery"
-          />
-
-          <img
-            class="gallery-small"
-            src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop"
-            alt="Gallery"
-          />
-
-          <img
-            class="gallery-small"
-            src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=1200&auto=format&fit=crop"
-            alt="Gallery"
-          />
-
-          <img
-            class="gallery-small"
-            src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop"
-            alt="Gallery"
-          />
-        </div>
-        <!-- COUNTDOWN -->
-        <div class="countdown">
-          <h2
-            class="section-title gold"
-            style="font-size: 32px; margin-bottom: 0"
-          >
-            Cuenta regresiva
+    <!-- UBICACIÓN -->
+    <section class="container">
+      <div class="location-card">
+        <div class="location-top">
+          <h2 class="section-title gold" style="font-size: 42px; margin-bottom: 0">
+            Ubicación
           </h2>
+
+          <div style="font-size: 46px; margin-top: 30px">📍</div>
+
+          <div class="place">Jardín Retamatitla</div>
+
+          <div class="city">Chimalhuacán, Estado de México</div>
+        </div>
+
+        <iframe class="map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30107.74287848702!2d-98.97246720885047!3d19.392181042608417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e2538df7473f%3A0x2ec88d40918547f7!2sSalon%20Los%20Pinos!5e0!3m2!1ses-419!2smx!4v1779165598077!5m2!1ses-419!2smx"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <div class="map-button-container">
+          <a href="https://maps.google.com/?q=Salon+Los+Pinos+Chimalhuacan" target="_blank" class="btn">
+            Cómo llegar
+          </a>
+        </div>
+
+        <!-- RSVP -->
+        <div class="rsvp">
+          <h2 class="section-title" style="font-size: 36px; margin-bottom: 0">
+            Confirma tu asistencia
+          </h2>
+
           <div class="divider"></div>
-          <div class="count-grid">
-            <div>
-              <div class="number" id="days">0</div>
-              <div class="label">Días</div>
-            </div>
 
-            <div>
-              <div class="number" id="hours">0</div>
-              <div class="label">Horas</div>
-            </div>
+          <p>Tu presencia es el mejor regalo para nosotros.</p>
 
-            <div>
-              <div class="number" id="minutes">0</div>
-              <div class="label">Minutos</div>
-            </div>
+          <button class="btn">Confirmar asistencia</button>
 
-            <div>
-              <div class="number" id="seconds">0</div>
-              <div class="label">Segundos</div>
-            </div>
+          <div class="confirm-date">
+            Favor de confirmar antes del <br />
+            15 de agosto, 2027
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  </div>
 
-      <!-- UBICACIÓN -->
-      <section class="container">
-        <div class="location-card">
-          <div class="location-top">
-            <h2
-              class="section-title gold"
-              style="font-size: 42px; margin-bottom: 0"
-            >
-              Ubicación
-            </h2>
+  <!-- JavaScript -->
+  <script defer src="app.js"></script>
+</body>
 
-            <div style="font-size: 46px; margin-top: 30px">📍</div>
-
-            <div class="place">Jardín Retamatitla</div>
-
-            <div class="city">Chimalhuacán, Estado de México</div>
-          </div>
-
-          <iframe
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30107.74287848702!2d-98.97246720885047!3d19.392181042608417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1e2538df7473f%3A0x2ec88d40918547f7!2sSalon%20Los%20Pinos!5e0!3m2!1ses-419!2smx!4v1779165598077!5m2!1ses-419!2smx"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          >
-          </iframe>
-
-          <div class="map-button-container">
-            <a
-              href="https://maps.google.com/?q=Salon+Los+Pinos+Chimalhuacan"
-              target="_blank"
-              class="btn"
-            >
-              Cómo llegar
-            </a>
-          </div>
-
-          <!-- RSVP -->
-          <div class="rsvp">
-            <h2 class="section-title" style="font-size: 36px; margin-bottom: 0">
-              Confirma tu asistencia
-            </h2>
-
-            <div class="divider"></div>
-
-            <p>Tu presencia es el mejor regalo para nosotros.</p>
-
-            <button class="btn">Confirmar asistencia</button>
-
-            <div class="confirm-date">
-              Favor de confirmar antes del <br />
-              15 de agosto, 2027
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    
-    <!-- JavaScript -->
-    <script defer src="app.js"></script>
-  </body>
 </html>

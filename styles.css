@@ -35,7 +35,7 @@ section {
   max-width: 430px;
   background: #000;
   box-shadow:
-    0 0 40px rgba(0,0,0,.5);
+    0 0 40px rgba(0, 0, 0, .5);
 }
 
 /* ========================= */
@@ -132,6 +132,76 @@ section {
   display: block;
 }
 
+/* =========================================
+   HOJAS CALLENDO
+========================================= */
+
+.leaves {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   LEAF
+========================================= */
+
+.leaf {
+  position: absolute;
+
+  top: -10%;
+
+  border-radius:
+    0 70% 0 70%;
+
+  opacity: .75;
+
+  animation:
+    fall linear infinite;
+
+  will-change:
+    transform, opacity;
+}
+
+
+/* =========================================
+   FALL ANIMATION
+========================================= */
+
+@keyframes fall {
+
+  0% {
+
+    transform:
+      translateY(-100px) translateX(0) rotate(0deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: .75;
+  }
+
+  100% {
+
+    transform:
+      translateY(140vh) translateX(-120px) rotate(720deg);
+
+    opacity: 0;
+  }
+
+}
+
 /* ========================= */
 /* HISTORIA */
 /* ========================= */
@@ -149,8 +219,7 @@ section {
   position: absolute;
   inset: 0;
   background:
-    url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop')
-    center/cover;
+    url('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop') center/cover;
   opacity: 0.25;
 }
 
@@ -273,6 +342,58 @@ section {
 
 .gallery-small {
   height: 200px;
+}
+
+/* =========================================
+   CARRUSEL PRINCIPAL DE GALERÍA
+========================================= */
+
+.gallery-carousel {
+  grid-column: span 2;
+
+  position: relative;
+
+  height: 260px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+
+.carousel-slide {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transform: scale(1.03);
+
+  transition: .8s ease;
+
+  will-change: opacity, transform;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+
+  transform: scale(1);
+}
+
+/* EVITA SELECCIONAR IMÁGENES */
+
+.gallery-carousel {
+  user-select: none;
+  cursor: grab;
+}
+
+.gallery-carousel:active {
+  cursor: grabbing;
 }
 
 /* ========================= */
