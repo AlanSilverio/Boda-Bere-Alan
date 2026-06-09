@@ -533,3 +533,47 @@ section {
   letter-spacing: 3px;
   font-family: 'Montserrat', sans-serif;
 }
+
+/* =========================================
+   RSVP FORM
+========================================= */
+
+.rsvp-section {
+  background: #f7f3ee;
+  color: #111;
+  padding: 80px 25px;
+}
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  width: 100%;
+  padding: 18px;
+  border: 1px solid #d4af6a;
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+}
+
+#rsvpForm textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  border-color: #b8924f;
+}
+
+#rsvpForm .btn {
+  width: 100%;
+}

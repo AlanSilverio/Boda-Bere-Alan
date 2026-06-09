@@ -215,7 +215,9 @@
 
           <p>Tu presencia es el mejor regalo para nosotros.</p>
 
-          <button class="btn">Confirmar asistencia</button>
+          <a href="#rsvpForm" class="btn">
+            Confirmar asistencia
+          </a>
 
           <div class="confirm-date">
             Favor de confirmar antes del <br />
@@ -223,6 +225,35 @@
           </div>
         </div>
       </div>
+    </section>
+    
+    <!-- FORMULARIO RSVP -->
+    <section class="rsvp-section container">
+      <h2 class="section-title">
+        Confirmación de Asistencia
+      </h2>
+      <div class="divider"></div>
+      <form id="rsvpForm">
+        <input type="text" id="guestName" placeholder="Nombre completo" required>
+        <select id="attendance">
+          <option value="">
+            ¿Asistirás?
+          </option>
+
+          <option value="Sí">
+            Sí asistiré
+          </option>
+
+          <option value="No">
+            No podré asistir
+          </option>
+        </select>
+        <input type="number" id="guests" placeholder="Número de asistentes" min="1" max="10">
+        <textarea id="message" placeholder="Mensaje para los novios"></textarea>
+        <button type="submit" class="btn">
+          Enviar Confirmación
+        </button>
+      </form>
     </section>
   </div>
 

@@ -292,3 +292,44 @@ document.addEventListener(
     startMusic,
     { once: true }
 );
+/* =========================================
+   RSVP FORM
+========================================= */
+const rsvpForm = document.getElementById("rsvpForm");
+
+if (rsvpForm) {
+    rsvpForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        const name =
+            document.getElementById("guestName").value;
+
+        const attendance =
+            document.getElementById("attendance").value;
+
+        const guests =
+            document.getElementById("guests").value;
+
+        const message =
+            document.getElementById("message").value;
+
+        const whatsappMessage =
+            `🎉 Confirmación de asistencia 🎉
+
+            👤 Nombre: ${name}
+
+            ✅ Asistencia: ${attendance}
+
+            👥 Número de invitados: ${guests}
+
+            💌 Mensaje:
+        ${message}`;
+
+        const whatsappURL =
+            `https://wa.me/52561306946?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(
+            whatsappURL,
+            "_blank"
+        );
+    });
+}
