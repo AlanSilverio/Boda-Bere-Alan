@@ -325,7 +325,7 @@ if (rsvpForm) {
         ${message}`;
 
         const whatsappURL =
-            `https://wa.me/52561306946?text=${encodeURIComponent(whatsappMessage)}`;
+            `https://wa.me/525613060946?text=${encodeURIComponent(whatsappMessage)}`;
 
         window.open(
             whatsappURL,
