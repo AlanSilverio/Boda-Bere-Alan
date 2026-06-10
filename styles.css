@@ -321,6 +321,7 @@ section {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 6px;
+  color: inherit;
 }
 
 .gallery-grid {
@@ -535,20 +536,40 @@ section {
 }
 
 /* =========================================
-   RSVP FORM
+   RSVP PREMIUM
 ========================================= */
 
 .rsvp-section {
   background: #f7f3ee;
+  padding: 80px 20px;
+}
+
+.rsvp-card {
+  background: white;
   color: #111;
-  padding: 80px 25px;
+  border-radius: 40px;
+  padding: 40px 25px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .08);
+}
+
+.rsvp-icon {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.rsvp-description {
+  text-align: center;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #rsvpForm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
+  gap: 18px;
 }
 
 #rsvpForm input,
@@ -556,24 +577,169 @@ section {
 #rsvpForm textarea {
   width: 100%;
   padding: 18px;
-  border: 1px solid #d4af6a;
-  border-radius: 20px;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-  outline: none;
+  border: 1px solid #e5d0a5;
+  border-radius: 18px;
+  font-size: 15px;
+  background: #fff;
+  color: #111;
+  transition: all .3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #rsvpForm textarea {
-  resize: none;
   min-height: 120px;
+  resize: none;
 }
 
 #rsvpForm input:focus,
 #rsvpForm select:focus,
 #rsvpForm textarea:focus {
+  outline: none;
   border-color: #b8924f;
+  box-shadow: 0 0 15px rgba(184, 146, 79, .25);
 }
 
-#rsvpForm .btn {
+.rsvp-btn {
   width: 100%;
+  background: linear-gradient(135deg,
+      #b8924f,
+      #d4af6a);
+  border: none;
+  color: white;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.rsvp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(184, 146, 79, .4);
+}
+
+#guestContainer {
+  overflow: hidden;
+  transition: all .4s ease;
+}
+
+#rsvpForm input::placeholder,
+#rsvpForm textarea::placeholder {
+  color: #777;
+}
+
+/* =========================================
+   MODAL RSVP
+========================================= */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+  z-index: 9999;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 35px;
+  padding: 35px 25px;
+  position: relative;
+  animation: modalIn .5s ease;
+}
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform:
+      translateY(40px) scale(.95);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0) scale(1);
+  }
+}
+
+.modal-title {
+  color: #111;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* =========================================
+   ENVIANDO RSVP
+========================================= */
+
+.sending-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: .4s ease;
+  z-index: 10000;
+}
+
+.sending-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sending-box {
+  text-align: center;
+  color: white;
+}
+
+.sending-heart {
+  font-size: 70px;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.sending-box h3 {
+  margin-top: 20px;
+  font-size: 28px;
+  color: #d4af6a;
+}
+
+.sending-box p {
+  margin-top: 10px;
+  color: #ccc;
 }

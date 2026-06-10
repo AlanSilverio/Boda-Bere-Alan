@@ -215,9 +215,9 @@
 
           <p>Tu presencia es el mejor regalo para nosotros.</p>
 
-          <a href="#rsvpForm" class="btn">
+          <button class="btn" id="openModal">
             Confirmar asistencia
-          </a>
+          </button>
 
           <div class="confirm-date">
             Favor de confirmar antes del <br />
@@ -226,39 +226,64 @@
         </div>
       </div>
     </section>
-    
+
     <!-- FORMULARIO RSVP -->
-    <section class="rsvp-section container">
-      <h2 class="section-title">
-        Confirmación de Asistencia
-      </h2>
-      <div class="divider"></div>
-      <form id="rsvpForm">
-        <input type="text" id="guestName" placeholder="Nombre completo" required>
-        <select id="attendance">
-          <option value="">
-            ¿Asistirás?
-          </option>
-
-          <option value="Sí">
-            Sí asistiré
-          </option>
-
-          <option value="No">
-            No podré asistir
-          </option>
-        </select>
-        <input type="number" id="guests" placeholder="Número de asistentes" min="1" max="10">
-        <textarea id="message" placeholder="Mensaje para los novios"></textarea>
-        <button type="submit" class="btn">
-          Enviar Confirmación
+    <section id="rsvpModal" class="modal">
+      <div class="modal-card">
+        <button class="modal-close" id="closeModal">
+          ✕
         </button>
-      </form>
-    </section>
-  </div>
 
-  <!-- JavaScript -->
-  <script defer src="app.js"></script>
+        <div class="rsvp-icon">
+          💌
+        </div>
+
+        <h2 class="section-title modal-title">
+          Confirmar Asistencia
+        </h2>
+
+        <form id="rsvpForm">
+          <input type="text" id="guestName" placeholder="Nombre completo" required>
+
+          <select id="attendance">
+            <option value="">
+              🤔¿Asistirás?
+            </option>
+            <option value="Sí asistiré">
+              ✅Sí asistiré
+            </option>
+            <option value="No podré asistir">
+              ❌ No podré asistir
+            </option>
+          </select>
+
+          <textarea id="message" placeholder="Mensaje para los novios"></textarea>
+          <button type="submit" class="btn rsvp-btn">
+            Enviar confirmación
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!--LOADING RSVP -->
+    <section id="sendingOverlay" class="sending-overlay">
+      <div class="sending-box">
+        <div class="sending-heart">
+          💛
+        </div>
+
+        <h3>
+          Enviando confirmación...
+        </h3>
+
+        <p>
+          Un momento por favor
+        </p>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script defer src="app.js"></script>
 </body>
 
 </html>

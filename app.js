@@ -292,44 +292,165 @@ document.addEventListener(
     startMusic,
     { once: true }
 );
+
+
 /* =========================================
-   RSVP FORM
+   MODAL RSVP
 ========================================= */
-const rsvpForm = document.getElementById("rsvpForm");
+
+const openModal =
+    document.getElementById("openModal");
+
+const closeModal =
+    document.getElementById("closeModal");
+
+const modal =
+    document.getElementById("rsvpModal");
+
+if (openModal) {
+
+    openModal.addEventListener(
+        "click",
+        () => {
+
+            modal.classList.add(
+                "show"
+            );
+        }
+    );
+}
+
+if (closeModal) {
+
+    closeModal.addEventListener(
+        "click",
+        () => {
+
+            modal.classList.remove(
+                "show"
+            );
+        }
+    );
+}
+
+
+/* =========================================
+   RSVP PREMIUM
+========================================= */
+
+const attendance =
+    document.getElementById(
+        "attendance"
+    );
+
+const guestContainer =
+    document.getElementById(
+        "guestContainer"
+    );
+
+if (
+    attendance &&
+    guestContainer
+) {
+
+    attendance.addEventListener(
+        "change",
+        () => {
+            if (
+                attendance.value ===
+                "Sí asistiré"
+            ) {
+                guestContainer.style.display =
+                    "block";
+            } else {
+                guestContainer.style.display =
+                    "none";
+            }
+        }
+    );
+}
+
+
+/* =========================================
+   ENVÍO RSVP
+========================================= */
+
+const rsvpForm =
+    document.getElementById(
+        "rsvpForm"
+    );
+
+const sendingOverlay =
+    document.getElementById(
+        "sendingOverlay"
+    );
 
 if (rsvpForm) {
-    rsvpForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const name =
-            document.getElementById("guestName").value;
 
-        const attendance =
-            document.getElementById("attendance").value;
+    rsvpForm.addEventListener(
+        "submit",
+        function (event) {
+            event.preventDefault();
 
-        const guests =
-            document.getElementById("guests").value;
+            const name =
+                document.getElementById(
+                    "guestName"
+                ).value;
 
-        const message =
-            document.getElementById("message").value;
+            const attendanceValue =
+                document.getElementById(
+                    "attendance"
+                ).value;
 
-        const whatsappMessage =
-            `🎉 Confirmación de asistencia 🎉
+            const guests =
+                document.getElementById(
+                    "guests"
+                )?.value || "0";
 
-            👤 Nombre: ${name}
+            const message =
+                document.getElementById(
+                    "message"
+                ).value;
 
-            ✅ Asistencia: ${attendance}
+            const whatsappMessage =
 
-            👥 Número de invitados: ${guests}
+                `💍 BODA BERE & ALAN 💍
 
-            💌 Mensaje:
-        ${message}`;
+                    👤 Invitado:
+                    ${name}
 
-        const whatsappURL =
-            `https://wa.me/525613060946?text=${encodeURIComponent(whatsappMessage)}`;
+                    📌 Confirmación:
+                    ${attendanceValue}
 
-        window.open(
-            whatsappURL,
-            "_blank"
-        );
-    });
+                    👥 Asistentes:
+                    ${guests}
+
+                    💌 Mensaje:
+                    ${message}
+
+                    Muchas gracias ❤️`;
+            const url =
+                `https://wa.me/525613060946?text=${encodeURIComponent(whatsappMessage)}`;
+            if (
+                sendingOverlay
+            ) {
+                sendingOverlay.classList.add(
+                    "show"
+                );
+            }
+            setTimeout(() => {
+                if (
+                    sendingOverlay
+                ) {
+                    sendingOverlay.classList.remove(
+                        "show"
+                    );
+                }
+                window.open(
+                    url,
+                    "_blank"
+                );
+            }, 4000);
+        }
+    );
 }
